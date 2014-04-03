@@ -20,6 +20,9 @@ basedir   = <%= @basedir %>
 datadir   = <%= @datadir %>
 tmpdir    = <%= @tmpdir %>
 max_connections = <%= @max_connections %>
+<% @mysqld_extra.keys.sort.each do | key | -%>
+<%= key %> = <%= @mysqld_extra[key] %>
+<% end -%>
 skip-external-locking
 
 <% if @bind_address -%>

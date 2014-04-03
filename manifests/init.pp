@@ -108,7 +108,8 @@ class mysql(
   $ssl                   = $mysql::params::ssl,
   $ssl_ca                = $mysql::params::ssl_ca,
   $ssl_cert              = $mysql::params::ssl_cert,
-  $ssl_key               = $mysql::params::ssl_key
+  $ssl_key               = $mysql::params::ssl_key,
+  $mysqld_extra          = $mysql::params::mysqld_extra
 ) inherits mysql::params{
 
   include '::mysql::client::install'
